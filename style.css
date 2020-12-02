@@ -1,0 +1,113 @@
+* {
+    overflow: hidden;
+}
+
+/******************************\
+|* modified bootstrap classes *|
+\******************************/
+
+.row {
+    margin: 0 !important;
+}
+
+.col {
+    padding: 0 !important;
+    background: white;
+}
+
+/*******************\
+|** Custom classes **|
+\*******************/
+
+.fullScreen {
+    height: 100vh;
+    width: 100vw;
+}
+
+#loadingSlide {
+    z-index: -100;
+}
+
+.mainContainer {
+    align-items: center;
+    justify-content: flex-start;
+    perspective: 100vh;
+    perspective-origin: 65vh;
+}
+
+#ludoBoard {
+    margin: 0 0 0 5vh !important;
+    height: 90vh;
+    width: 90vh;
+    /* transform: rotateX(45deg) translateX(100px) translateY(-100px); */
+    /* transform: rotateZ(90deg) rotateY(-45deg); */
+    transform-style: preserve-3d;
+    transition: transform 5s cubic-bezier(0, 0.75, 0.25, 1);
+    box-shadow: 0 1px 0 0 #000;
+}
+
+.rowEndings {
+    height: 36vh;
+}
+
+.rowMid {
+    height: 18vh;
+}
+
+.rowEndings > div:nth-child(2),
+.rowMid > div:nth-child(2) {
+    width: 18vh;
+}
+
+#ludoBoard > div {
+    width: 90vh;
+}
+
+#ludoBoard > .row .row {
+    height: 6vh;
+}
+
+@media (min-width: 1024px) {
+    #ludoBoard:hover {
+        transform: rotateX(45deg) translateX(100px) translateY(-100px);
+    }
+}
+
+@media (orientation: portrait) {
+    .mainContainer {
+        align-items: flex-start;
+        justify-content: center;
+        perspective: 100vw;
+    }
+
+    #ludoBoard {
+        margin: 10vw 0 0 !important;
+        height: 90vw;
+        width: 90vw;
+    }
+
+    #ludoBoard:hover {
+        transform: none;
+    }
+
+    .rowEndings {
+        height: 36vw;
+    }
+
+    .rowMid {
+        height: 18vw;
+    }
+
+    .rowEndings > div:nth-child(2),
+    .rowMid > div:nth-child(2) {
+        width: 18vw;
+    }
+
+    #ludoBoard > div {
+        width: 90vw;
+    }
+
+    #ludoBoard > .row .row {
+        height: 6vw;
+    }
+}

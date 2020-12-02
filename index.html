@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" class="fullScreen">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ludo</title>
+
+    <!-- adding bootstrap css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- linking jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- linking custom stylesheet -->
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body class="fullScreen">
+
+    <!-- loading screen -->
+    <div id="loadingSlide" class="position-absolute fullScreen"></div>
+
+    <!-- main game ui -->
+    <div class="mainContainer row fullScreen">
+
+        <!-- ludo board -->
+        <div id="ludoBoard" class="bg-dark">
+            
+            <!-- row1 -->
+            <div class="row rowEndings border border-bottom-0 border-dark">
+                <div class="col bg-danger border-dark border"></div>
+
+                <div class="bg-dark">
+                    <div class="row">
+                        <div class="col border-dark border"></div>
+                        <div class="col border-dark border"></div>
+                        <div class="col border-dark border"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col border-dark border"></div>
+                        <div class="col border-dark border bg-success"></div>
+                        <div class="col border-dark border bg-success"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col border-dark border"></div>
+                        <div class="col border-dark border bg-success"></div>
+                        <div class="col border-dark border"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col border-dark border"></div>
+                        <div class="col border-dark border bg-success"></div>
+                        <div class="col border-dark border"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col border-dark border"></div>
+                        <div class="col border-dark border bg-success"></div>
+                        <div class="col border-dark border"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col border-dark border"></div>
+                        <div class="col border-dark border bg-success"></div>
+                        <div class="col border-dark border"></div>
+                    </div>
+                </div>
+
+                <div class="col bg-success border-dark border"></div>
+            </div>
+
+            <!-- row2 -->
+            <div class="row rowMid">
+                <div class="col border-dark border border-right-0 bg-dark">
+                    <div class="row">
+                        <div class="col border-dark border"></div>
+                        <div class="col border-dark border bg-danger"></div>
+                        <div class="col border-dark border"></div>
+                        <div class="col border-dark border"></div>
+                        <div class="col border-dark border"></div>
+                        <div class="col border-dark border"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col border-dark border"></div>
+                        <div class="col border-dark border bg-danger"></div>
+                        <div class="col border-dark border bg-danger"></div>
+                        <div class="col border-dark border bg-danger"></div>
+                        <div class="col border-dark border bg-danger"></div>
+                        <div class="col border-dark border bg-danger"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col border-dark border"></div>
+                        <div class="col border-dark border"></div>
+                        <div class="col border-dark border"></div>
+                        <div class="col border-dark border"></div>
+                        <div class="col border-dark border"></div>
+                        <div class="col border-dark border"></div>
+                    </div>
+                </div>
+
+                <div class="bg-secondary"></div>
+
+                <div class="col border-dark border border-left-0 bg-dark">
+                    <div class="row">
+                        <div class="col border-dark border"></div>
+                        <div class="col border-dark border"></div>
+                        <div class="col border-dark border"></div>
+                        <div class="col border-dark border"></div>
+                        <div class="col border-dark border"></div>
+                        <div class="col border-dark border"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col border-dark border bg-warning"></div>
+                        <div class="col border-dark border bg-warning"></div>
+                        <div class="col border-dark border bg-warning"></div>
+                        <div class="col border-dark border bg-warning"></div>
+                        <div class="col border-dark border bg-warning"></div>
+                        <div class="col border-dark border"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col border-dark border"></div>
+                        <div class="col border-dark border"></div>
+                        <div class="col border-dark border"></div>
+                        <div class="col border-dark border"></div>
+                        <div class="col border-dark border bg-warning"></div>
+                        <div class="col border-dark border"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- row3 -->
+            <div class="row rowEndings border border-top-0 border-dark">
+                <div class="col bg-primary border-dark border"></div>
+
+                <div class="bg-dark">
+                    <div class="row">
+                        <div class="col border-dark border"></div>
+                        <div class="col border-dark border bg-primary"></div>
+                        <div class="col border-dark border"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col border-dark border"></div>
+                        <div class="col border-dark border bg-primary"></div>
+                        <div class="col border-dark border"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col border-dark border"></div>
+                        <div class="col border-dark border bg-primary"></div>
+                        <div class="col border-dark border"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col border-dark border"></div>
+                        <div class="col border-dark border bg-primary"></div>
+                        <div class="col border-dark border"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col border-dark border bg-primary"></div>
+                        <div class="col border-dark border bg-primary"></div>
+                        <div class="col border-dark border"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col border-dark border"></div>
+                        <div class="col border-dark border"></div>
+                        <div class="col border-dark border"></div>
+                    </div>
+                </div>
+
+                <div class="col bg-warning border-dark border"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- custom js -->
+    <script src="./game.js"></script>
+    
+</body>
+</html>
