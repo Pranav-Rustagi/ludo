@@ -15,9 +15,9 @@
     background: white;
 }
 
-/*******************\
+/********************\
 |** Custom classes **|
-\*******************/
+\********************/
 
 .fullScreen {
     height: 100vh;
@@ -31,16 +31,15 @@
 .mainContainer {
     align-items: center;
     justify-content: flex-start;
+    background: teal;
     perspective: 100vh;
     perspective-origin: 65vh;
 }
 
 #ludoBoard {
-    margin: 0 0 0 5vh !important;
+    margin: 5vh !important;
     height: 90vh;
     width: 90vh;
-    /* transform: rotateX(45deg) translateX(100px) translateY(-100px); */
-    /* transform: rotateZ(90deg) rotateY(-45deg); */
     transform-style: preserve-3d;
     transition: transform 5s cubic-bezier(0, 0.75, 0.25, 1);
     box-shadow: 0 1px 0 0 #000;
@@ -67,7 +66,82 @@
     height: 6vh;
 }
 
+.rowMid > div:nth-child(2) div {
+    border-top-color: #28a745;
+    border-left-color: #dc3545;
+    border-bottom-color: #007bff;
+    border-right-color: #ffc107;
+}
+
+.outBox {
+    width: 75%;
+    height: 75%;
+    background: rgb(241, 241, 238);
+}
+
+#ludoBoard .outBox > .row {
+    height: 50%!important;
+}
+
+.victoryBox {
+    border-width: 8.75vh;
+    border-style: solid;
+}
+
+.diagonal {
+    border-width: 0px !important;
+    border-top-width: 0.25vh !important;
+    position: absolute;
+    width: 36vh;
+}
+
+.diagonal:last-child {
+    transform: rotateZ(45deg);
+    transform-origin: left;
+}
+
+.diagonal:not(:last-child) {
+    transform: rotateZ(-45deg);
+    right: 0;
+    transform-origin: right;
+}
+
+.token_home {
+    height: 100%;
+}
+
+.token_home > div {
+    height: 75%;
+    width: 75%;
+}
+
+/********************\
+|***** Animations ***|
+\********************/
+
+@keyframes rotate {
+    0% {
+        transform: rotateX(45deg) translateX(100px) translateY(-100px);
+    }
+    25% {
+        transform: rotateZ(-90deg) rotateY(45deg) translateX(100px) translateY(100px);
+    }
+    50% {
+        transform: rotateZ(-180deg) rotateX(-45deg) translateX(-100px) translateY(100px);
+    }
+    75% {
+        transform: rotateZ(-270deg) rotateY(-45deg) translateX(-100px) translateY(-100px);
+    }
+    100% {
+        transform: rotateX(45deg) translateX(100px) translateY(-100px);
+    }
+}
+
 @media (min-width: 1024px) {
+    #ludoBoard {
+        /* animation: rotate 6s cubic-bezier(0, 0.75, 0.75, 1) 0s infinite normal both; */
+    }
+
     #ludoBoard:hover {
         transform: rotateX(45deg) translateX(100px) translateY(-100px);
     }
@@ -78,10 +152,11 @@
         align-items: flex-start;
         justify-content: center;
         perspective: 100vw;
+        perspective-origin: 65vw;
     }
 
     #ludoBoard {
-        margin: 10vw 0 0 !important;
+        margin: 10vw 5vw 0 !important;
         height: 90vw;
         width: 90vw;
     }
@@ -109,5 +184,14 @@
 
     #ludoBoard > .row .row {
         height: 6vw;
+    }
+
+    .victoryBox {
+        border-width: 8.75vw;
+    }
+
+    .diagonal {
+        border-top-width: 0.25vw !important;
+        width: 36vw;
     }
 }

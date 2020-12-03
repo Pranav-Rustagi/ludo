@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" class="fullScreen">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ludo</title>
+    <link rel="shortcut icon" href="./imgs/logo.png" type="image/x-icon">
 
     <!-- adding bootstrap css -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
     <!-- linking jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -15,6 +18,7 @@
     <link rel="stylesheet" href="./style.css">
 
 </head>
+
 <body class="fullScreen">
 
     <!-- loading screen -->
@@ -25,144 +29,224 @@
 
         <!-- ludo board -->
         <div id="ludoBoard" class="bg-dark">
-            
+
             <!-- row1 -->
             <div class="row rowEndings border border-bottom-0 border-dark">
-                <div class="col bg-danger border-dark border"></div>
-
-                <div class="bg-dark">
-                    <div class="row">
-                        <div class="col border-dark border"></div>
-                        <div class="col border-dark border"></div>
-                        <div class="col border-dark border"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col border-dark border"></div>
-                        <div class="col border-dark border bg-success"></div>
-                        <div class="col border-dark border bg-success"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col border-dark border"></div>
-                        <div class="col border-dark border bg-success"></div>
-                        <div class="col border-dark border"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col border-dark border"></div>
-                        <div class="col border-dark border bg-success"></div>
-                        <div class="col border-dark border"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col border-dark border"></div>
-                        <div class="col border-dark border bg-success"></div>
-                        <div class="col border-dark border"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col border-dark border"></div>
-                        <div class="col border-dark border bg-success"></div>
-                        <div class="col border-dark border"></div>
+                <div class="col bg-danger border-dark border d-flex">
+                    <div class="outBox border border-dark m-auto d-flex align-content-around flex-column">
+                        <div class="row">
+                            <div class="token_home col d-flex">
+                                <div class="border border-dark rounded-circle m-auto bg-danger"></div>
+                            </div>
+                            <div class="token_home col d-flex">
+                                <div class="border border-dark rounded-circle m-auto bg-danger"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="token_home col d-flex">
+                                <div class="border border-dark rounded-circle m-auto bg-danger"></div>
+                            </div>
+                            <div class="token_home col d-flex">
+                                <div class="border border-dark rounded-circle m-auto bg-danger"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col bg-success border-dark border"></div>
+                <div class="bg-dark">
+                    <div class="row">
+                        <div class="col border-dark border" data-index="" data-next=""></div>
+                        <div class="col border-dark border" data-index="" data-next="" data-green="true" data-green-next=""></div>
+                        <div class="col border-dark border" data-index="" data-next=""></div>
+                    </div>
+                    <div class="row">
+                        <div class="col border-dark border" data-index="" data-next=""></div>
+                        <div class="col border-dark border bg-success" data-index="" data-next=""></div>
+                        <div class="col border-dark border bg-success" data-index="" data-next=""></div>
+                    </div>
+                    <div class="row">
+                        <div class="col border-dark border" data-index="" data-next=""></div>
+                        <div class="col border-dark border bg-success" data-index="" data-next=""></div>
+                        <div class="col border-dark border" data-index="" data-next=""></div>
+                    </div>
+                    <div class="row">
+                        <div class="col border-dark border" data-index="" data-next=""></div>
+                        <div class="col border-dark border bg-success" data-index="" data-next=""></div>
+                        <div class="col border-dark border" data-index="" data-next=""></div>
+                    </div>
+                    <div class="row">
+                        <div class="col border-dark border" data-index="" data-next=""></div>
+                        <div class="col border-dark border bg-success" data-index="" data-next=""></div>
+                        <div class="col border-dark border" data-index="" data-next=""></div>
+                    </div>
+                    <div class="row">
+                        <div class="col border-dark border" data-index="" data-next=""></div>
+                        <div class="col border-dark border bg-success" data-index="" data-next=""></div>
+                        <div class="col border-dark border" data-index="" data-next=""></div>
+                    </div>
+                </div>
+
+                <div class="col bg-success border-dark border d-flex">
+                    <div class="outBox border border-dark m-auto d-flex align-content-around flex-column">
+                        <div class="row">
+                            <div class="token_home col d-flex">
+                                <div class="border border-dark rounded-circle m-auto bg-success"></div>
+                            </div>
+                            <div class="token_home col d-flex">
+                                <div class="border border-dark rounded-circle m-auto bg-success"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="token_home col d-flex">
+                                <div class="border border-dark rounded-circle m-auto bg-success"></div>
+                            </div>
+                            <div class="token_home col d-flex">
+                                <div class="border border-dark rounded-circle m-auto bg-success"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- row2 -->
             <div class="row rowMid">
                 <div class="col border-dark border border-right-0 bg-dark">
                     <div class="row">
-                        <div class="col border-dark border"></div>
-                        <div class="col border-dark border bg-danger"></div>
-                        <div class="col border-dark border"></div>
-                        <div class="col border-dark border"></div>
-                        <div class="col border-dark border"></div>
-                        <div class="col border-dark border"></div>
+                        <div class="col border-dark border" data-index="" data-next=""></div>
+                        <div class="col border-dark border bg-danger" data-index="" data-next=""></div>
+                        <div class="col border-dark border" data-index="" data-next=""></div>
+                        <div class="col border-dark border" data-index="" data-next=""></div>
+                        <div class="col border-dark border" data-index="" data-next=""></div>
+                        <div class="col border-dark border" data-index="" data-next=""></div>
                     </div>
                     <div class="row">
-                        <div class="col border-dark border"></div>
-                        <div class="col border-dark border bg-danger"></div>
-                        <div class="col border-dark border bg-danger"></div>
-                        <div class="col border-dark border bg-danger"></div>
-                        <div class="col border-dark border bg-danger"></div>
-                        <div class="col border-dark border bg-danger"></div>
+                        <div class="col border-dark border" data-index="" data-next="" data-red="true" data-red-next=""></div>
+                        <div class="col border-dark border bg-danger" data-index="" data-next=""></div>
+                        <div class="col border-dark border bg-danger" data-index="" data-next=""></div>
+                        <div class="col border-dark border bg-danger" data-index="" data-next=""></div>
+                        <div class="col border-dark border bg-danger" data-index="" data-next=""></div>
+                        <div class="col border-dark border bg-danger" data-index="" data-next=""></div>
                     </div>
                     <div class="row">
-                        <div class="col border-dark border"></div>
-                        <div class="col border-dark border"></div>
-                        <div class="col border-dark border"></div>
-                        <div class="col border-dark border"></div>
-                        <div class="col border-dark border"></div>
-                        <div class="col border-dark border"></div>
+                        <div class="col border-dark border" data-index="" data-next=""></div>
+                        <div class="col border-dark border" data-index="" data-next=""></div>
+                        <div class="col border-dark border" data-index="" data-next=""></div>
+                        <div class="col border-dark border" data-index="" data-next=""></div>
+                        <div class="col border-dark border" data-index="" data-next=""></div>
+                        <div class="col border-dark border" data-index="" data-next=""></div>
                     </div>
                 </div>
 
-                <div class="bg-secondary"></div>
+                <div class="d-flex position-relative">
+                    <div class="victoryBox m-auto"></div>
+                    <div class="diagonal border border-dark"></div>
+                    <div class="diagonal border border-dark"></div>
+                </div>
 
                 <div class="col border-dark border border-left-0 bg-dark">
                     <div class="row">
-                        <div class="col border-dark border"></div>
-                        <div class="col border-dark border"></div>
-                        <div class="col border-dark border"></div>
-                        <div class="col border-dark border"></div>
-                        <div class="col border-dark border"></div>
-                        <div class="col border-dark border"></div>
+                        <div class="col border-dark border" data-index="" data-next=""></div>
+                        <div class="col border-dark border" data-index="" data-next=""></div>
+                        <div class="col border-dark border" data-index="" data-next=""></div>
+                        <div class="col border-dark border" data-index="" data-next=""></div>
+                        <div class="col border-dark border" data-index="" data-next=""></div>
+                        <div class="col border-dark border" data-index="" data-next=""></div>
                     </div>
                     <div class="row">
-                        <div class="col border-dark border bg-warning"></div>
-                        <div class="col border-dark border bg-warning"></div>
-                        <div class="col border-dark border bg-warning"></div>
-                        <div class="col border-dark border bg-warning"></div>
-                        <div class="col border-dark border bg-warning"></div>
-                        <div class="col border-dark border"></div>
+                        <div class="col border-dark border bg-warning" data-index="" data-next=""></div>
+                        <div class="col border-dark border bg-warning" data-index="" data-next=""></div>
+                        <div class="col border-dark border bg-warning" data-index="" data-next=""></div>
+                        <div class="col border-dark border bg-warning" data-index="" data-next=""></div>
+                        <div class="col border-dark border bg-warning" data-index="" data-next=""></div>
+                        <div class="col border-dark border" data-index="" data-next="" data-yellow="true" data-yellow-next=""></div>
                     </div>
                     <div class="row">
-                        <div class="col border-dark border"></div>
-                        <div class="col border-dark border"></div>
-                        <div class="col border-dark border"></div>
-                        <div class="col border-dark border"></div>
-                        <div class="col border-dark border bg-warning"></div>
-                        <div class="col border-dark border"></div>
+                        <div class="col border-dark border" data-index="" data-next=""></div>
+                        <div class="col border-dark border" data-index="" data-next=""></div>
+                        <div class="col border-dark border" data-index="" data-next=""></div>
+                        <div class="col border-dark border" data-index="" data-next=""></div>
+                        <div class="col border-dark border bg-warning" data-index="" data-next=""></div>
+                        <div class="col border-dark border" data-index="" data-next=""></div>
                     </div>
                 </div>
             </div>
 
             <!-- row3 -->
             <div class="row rowEndings border border-top-0 border-dark">
-                <div class="col bg-primary border-dark border"></div>
-
-                <div class="bg-dark">
-                    <div class="row">
-                        <div class="col border-dark border"></div>
-                        <div class="col border-dark border bg-primary"></div>
-                        <div class="col border-dark border"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col border-dark border"></div>
-                        <div class="col border-dark border bg-primary"></div>
-                        <div class="col border-dark border"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col border-dark border"></div>
-                        <div class="col border-dark border bg-primary"></div>
-                        <div class="col border-dark border"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col border-dark border"></div>
-                        <div class="col border-dark border bg-primary"></div>
-                        <div class="col border-dark border"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col border-dark border bg-primary"></div>
-                        <div class="col border-dark border bg-primary"></div>
-                        <div class="col border-dark border"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col border-dark border"></div>
-                        <div class="col border-dark border"></div>
-                        <div class="col border-dark border"></div>
+                <div class="col bg-primary border-dark border d-flex">
+                    <div class="outBox border border-dark m-auto d-flex align-content-around flex-column">
+                        <div class="row">
+                            <div class="token_home col d-flex">
+                                <div class="border border-dark rounded-circle m-auto bg-primary"></div>
+                            </div>
+                            <div class="token_home col d-flex">
+                                <div class="border border-dark rounded-circle m-auto bg-primary"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="token_home col d-flex">
+                                <div class="border border-dark rounded-circle m-auto bg-primary"></div>
+                            </div>
+                            <div class="token_home col d-flex">
+                                <div class="border border-dark rounded-circle m-auto bg-primary"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col bg-warning border-dark border"></div>
+                <div class="bg-dark">
+                    <div class="row">
+                        <div class="col border-dark border" data-index="" data-next=""></div>
+                        <div class="col border-dark border bg-primary" data-index="" data-next=""></div>
+                        <div class="col border-dark border" data-index="" data-next=""></div>
+                    </div>
+                    <div class="row">
+                        <div class="col border-dark border" data-index="" data-next=""></div>
+                        <div class="col border-dark border bg-primary" data-index="" data-next=""></div>
+                        <div class="col border-dark border" data-index="" data-next=""></div>
+                    </div>
+                    <div class="row">
+                        <div class="col border-dark border" data-index="" data-next=""></div>
+                        <div class="col border-dark border bg-primary" data-index="" data-next=""></div>
+                        <div class="col border-dark border" data-index="" data-next=""></div>
+                    </div>
+                    <div class="row">
+                        <div class="col border-dark border" data-index="" data-next=""></div>
+                        <div class="col border-dark border bg-primary" data-index="" data-next=""></div>
+                        <div class="col border-dark border" data-index="" data-next=""></div>
+                    </div>
+                    <div class="row">
+                        <div class="col border-dark border bg-primary" data-index="" data-next=""></div>
+                        <div class="col border-dark border bg-primary" data-index="" data-next=""></div>
+                        <div class="col border-dark border" data-index="" data-next=""></div>
+                    </div>
+                    <div class="row">
+                        <div class="col border-dark border" data-index="" data-next=""></div>
+                        <div class="col border-dark border" data-index="" data-next="" data-blue="true" data-blue-next=""></div>
+                        <div class="col border-dark border" data-index="" data-next=""></div>
+                    </div>
+                </div>
+
+                <div class="col bg-warning border-dark border d-flex">
+                    <div class="outBox border border-dark m-auto d-flex align-content-around flex-column">
+                        <div class="row">
+                            <div class="token_home col d-flex">
+                                <div class="border border-dark rounded-circle m-auto bg-warning"></div>
+                            </div>
+                            <div class="token_home col d-flex">
+                                <div class="border border-dark rounded-circle m-auto bg-warning"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="token_home col d-flex">
+                                <div class="border border-dark rounded-circle m-auto bg-warning"></div>
+                            </div>
+                            <div class="token_home col d-flex">
+                                <div class="border border-dark rounded-circle m-auto bg-warning"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -170,6 +254,7 @@
 
     <!-- custom js -->
     <script src="./game.js"></script>
-    
+
 </body>
+
 </html>
