@@ -33,7 +33,6 @@
 .mainContainer {
     align-items: center;
     justify-content: flex-start;
-    background: teal;
     perspective: 100vh;
     perspective-origin: 65vh;
 }
