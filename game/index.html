@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ludo</title>
-    <link rel="shortcut icon" href="./imgs/logo-3.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./../imgs/logo-3.png" type="image/x-icon">
 
     <!-- adding bootstrap css -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -21,8 +21,12 @@
 
 <body class="fullScreen d-flex">
 
+    <div class="position-fixed fullScreen">
+        <div id="grid_pattern"></div>
+    </div>
+
     <!-- main game ui -->
-    <div class="mainContainer row fullScreen bg-info">
+    <div class="mainContainer row fullScreen">
 
         <!-- ludo board -->
         <div id="ludoBoard" class="bg-dark">
@@ -33,7 +37,7 @@
             <div class="row rowEndings border border-bottom-0">
 
                 <!-- red box -->
-                <div class="col bg-danger border d-flex">
+                <div class="col bg-danger border d-flex" id="red_box">
                     <div class="outBox border m-auto d-flex align-content-around flex-column">
                         <div class="row">
                             <div class="token_home col d-flex">
@@ -95,7 +99,7 @@
                 </div>
 
                 <!-- green box -->
-                <div class="col bg-success border d-flex">
+                <div class="col bg-success border d-flex" id="green_box">
                     <div class="outBox border m-auto d-flex align-content-around flex-column">
                         <div class="row">
                             <div class="token_home col d-flex">
@@ -201,7 +205,7 @@
             <div class="row rowEndings border border-top-0">
 
                 <!-- blue box -->
-                <div class="col bg-primary border d-flex">
+                <div class="col bg-primary border d-flex" id="blue_box">
                     <div class="outBox border m-auto d-flex align-content-around flex-column">
                         <div class="row">
                             <div class="token_home col d-flex">
@@ -263,7 +267,7 @@
                 </div>
 
                 <!-- yellow box -->
-                <div class="col bg-warning border d-flex">
+                <div class="col bg-warning border d-flex" id="yellow_box">
                     <div class="outBox border m-auto d-flex align-content-around flex-column">
                         <div class="row">
                             <div class="token_home col d-flex">

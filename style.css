@@ -1,4 +1,5 @@
 #imgSheet img{
+    z-index: 10;
     width: 30vh;
     animation: rotateBack 10s linear 0s infinite normal forwards;
 }
@@ -7,28 +8,42 @@
     background: rgba(0, 0, 0, 0.5);
 }
 
+#option_box{
+    width: 100vw;
+    z-index: 1000;
+    bottom: 2.5vh;
+}
+
+#playerCount, #choose_color > div {
+    width: 50%;
+}
+
 @media (orientation: portrait){
     #imgSheet img{
         width: 30vw;
+    }
+    
+    #playerCount, #choose_color > div {
+        width: 100%;
     }
 }
 
 @keyframes rotateBack{
     0%{
-        opacity: 0.25;
+        opacity: 0.5;
         transform: none;
     }
     25%{
-        opacity: 0.5;
+        opacity: 1;
     }
     50%{
-        opacity: 0.25;
-    }
-    75%{
         opacity: 0.5;
     }
+    75%{
+        opacity: 1;
+    }
     100%{
-        opacity: 0.25;
+        opacity: 0.5;
         transform: rotate(360deg);
     }
 }
