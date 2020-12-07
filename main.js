@@ -13,7 +13,7 @@ const colorArr = ["red", "yellow", "blue", "green"];
 $(window).on('load', () => {
     let sessionVal = JSON.parse(sessionStorage.getItem('ludo'));
     if (sessionVal) {
-        $('#playerCount').hide().next().show();
+        $('#label_for_playerCount').hide().next().hide().next().show();
         $('#reset').removeClass('d-none');
         let playerCount = sessionVal.playerCount;
         $('#playerCount').val(playerCount);
@@ -27,6 +27,7 @@ $(window).on('load', () => {
 
 // loading input boxes based on the player count and generating random colors for tokens
 function loadPlayerInps() {
+    $('#choose_color > div:not(:first-child)').remove();
     let playerCount = parseInt($('#playerCount').val());
     let color = [...colorArr];
     let dataObj = JSON.parse(sessionStorage.getItem("ludo"));
@@ -73,7 +74,7 @@ function loadPlayerInps() {
 $('#continue').click(() => {
     var $choose_color = $('#choose_color');
     if (!$choose_color.is(':visible')) {
-        $('#playerCount').fadeOut("slow", () => {
+        $('#playerCount, #label_for_playerCount').fadeOut("slow", () => {
             loadPlayerInps();
             $('#reset').removeClass('d-none');
             $choose_color.fadeIn("slow");

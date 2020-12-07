@@ -1,7 +1,15 @@
+#imgSheet{
+    margin-top: 25vh;
+}
+
 #imgSheet img{
     z-index: 10;
     width: 30vh;
     animation: rotateBack 10s linear 0s infinite normal forwards;
+}
+
+#game_title{
+    top: 10vh;
 }
 
 #box{
@@ -14,13 +22,29 @@
     bottom: 2.5vh;
 }
 
+#inputPart{
+    bottom: 10vh;
+}
+
 #playerCount, #choose_color > div {
     width: 50%;
 }
 
 @media (orientation: portrait){
+    #imgSheet{
+        margin-top: 25vw;
+    }
+
     #imgSheet img{
         width: 30vw;
+    }
+
+    #game_title{
+        top: 10vw;
+    }
+
+    #inputPart{
+        bottom: 10vw;
     }
     
     #playerCount, #choose_color > div {
