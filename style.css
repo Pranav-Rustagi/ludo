@@ -32,11 +32,11 @@
 
 @media (orientation: portrait){
     #imgSheet{
-        margin-top: 25vw;
+        margin-top: 40vw;
     }
 
     #imgSheet img{
-        width: 30vw;
+        width: 40vw;
     }
 
     #game_title{
@@ -44,11 +44,15 @@
     }
 
     #inputPart{
-        bottom: 10vw;
+        bottom: 40vw;
     }
     
     #playerCount, #choose_color > div {
-        width: 100%;
+        width: 90%;
+    }
+
+    #option_box{
+        bottom: 15vw;
     }
 }
 
