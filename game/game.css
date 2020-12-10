@@ -1,6 +1,9 @@
-* {
+html, body {
     overflow: hidden;
 }
+
+
+
 
 /******************************\
 |* modified bootstrap classes *|
@@ -22,7 +25,6 @@
 
 
 
-
 /*********************\
 |*** Custom styles ***|
 \*********************/
@@ -31,6 +33,8 @@ body {
     background: -webkit-radial-gradient(center, #5091dd 0%, #030617 100%);
     background: -moz-radial-gradient(center, #5091dd 0%, #030617 100%);
     background: radial-gradient(center, #5091dd 0%, #030617 100%);
+    perspective: 100vh;
+    transform-style: preserve-3d;
 }
 
 .fullScreen {
@@ -430,19 +434,14 @@ body {
         2997px 0px #030617, 3000px 0px #030617;
 }
 
-.mainContainer {
+#mainContainer {
     align-items: center;
     justify-content: flex-start;
-    perspective: 100vh;
-    perspective-origin: 65vh;
 }
 
 #ludoBoard {
-    margin: 5vh !important;
     height: 90vh;
     width: 90vh;
-    transform-style: preserve-3d;
-    transition: transform 5s cubic-bezier(0, 0.75, 0.25, 1);
     box-shadow: 0 1px 0 0 #000;
 }
 
@@ -524,18 +523,22 @@ body {
 
 .token_green {
     background: #066b1e;
+    /* box-shadow: #28a745 0 2px 0px, #000 0px 3px 0px; */
 }
 
 .token_red {
     background: #a51423;
+    /* box-shadow: #dc3545 0 2px 0px, #000 0px 3px 0px; */
 }
 
 .token_blue {
-    background: #093e77;
+    background: #0550a1;
+    /* box-shadow: #007bff 0 2px 0px, #000 0px 3px 0px; */
 }
 
 .token_yellow {
-    background: #ffc107;
+    background: #dba607;
+    /* box-shadow: #ffc107 0 2px 0px, #000 0px 3px 0px; */
 }
 
 #ludoBoard > div svg {
@@ -543,25 +546,6 @@ body {
     fill: #fff;
     height: 5vh;
 }
-
-.turn_of_red {
-    transform: rotate(-90deg);
-}
-
-.turn_of_green {
-    transform: rotate(-180deg);
-}
-
-.turn_of_yellow {
-    transform: rotate(-270deg);
-}
-
-.turn_of_blue {
-    transform: rotate(-360deg);
-}
-
-
-
 
 
 
@@ -571,39 +555,29 @@ body {
 \***************************/
 
 @media (min-width: 1024px) {
-    .turn_of_red {
-        transform: rotateZ(-90deg) rotateY(45deg) translateX(100px) translateY(100px);
-    }
 
-    .turn_of_green {
-        transform: rotateZ(-180deg) rotateX(-45deg) translateX(-100px) translateY(100px);
-    }
-
-    .turn_of_yellow {
-        transform: rotateZ(-270deg) rotateY(-45deg) translateX(-100px) translateY(-100px);
-    }
-
-    .turn_of_blue {
-        transform: rotateZ(-360deg) rotateX(45deg) translateX(100px) translateY(-100px);
-    }
-}
-
-@media (orientation: portrait) {
-    .mainContainer {
-        align-items: flex-start;
-        justify-content: center;
-        perspective: 100vw;
-        perspective-origin: 65vw;
+    #mainContainer{
+        transform: rotateX(45deg) translateY(-5vh);
     }
 
     #ludoBoard {
-        margin: 10vw 5vw 0 !important;
-        height: 90vw;
-        width: 90vw;
+        transition: transform 5s cubic-bezier(0, 0.75, 0.25, 1);
+    }
+}
+
+
+
+
+@media (orientation: portrait) {
+    
+    #mainContainer {
+        align-items: flex-start;
+        justify-content: center;
     }
 
-    #ludoBoard:hover {
-        transform: none;
+    #ludoBoard {
+        height: 90vw;
+        width: 90vw;
     }
 
     .rowEndings {
@@ -644,31 +618,5 @@ body {
     #ludoBoard > div svg {
         width: 5vw;
         height: 5vw;
-    }
-}
-
-
-
-
-
-/********************\
-|***** Animations ***|
-\********************/
-
-@keyframes rotate {
-    0% {
-        transform: rotateX(45deg) translateX(100px) translateY(-100px);
-    }
-    25% {
-        transform: rotateZ(-90deg) rotateY(45deg) translateX(100px) translateY(100px);
-    }
-    50% {
-        transform: rotateZ(-180deg) rotateX(-45deg) translateX(-100px) translateY(100px);
-    }
-    75% {
-        transform: rotateZ(-270deg) rotateY(-45deg) translateX(-100px) translateY(-100px);
-    }
-    100% {
-        transform: rotateX(45deg) translateX(100px) translateY(-100px);
     }
 }
