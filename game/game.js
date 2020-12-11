@@ -6,7 +6,7 @@ const colorObj = {
 }
 const colorArr = [];
 const originalColorArr = ["blue", "red", "green", "yellow"];
-var turnOf;
+var curTurn;
 var prevTurn = "blue";
 var counter;
 var angleOfRotation = 0;
@@ -29,48 +29,53 @@ $(window).on('load', () => {
 
 function setup(dataObj) {
 
-    // open fullScreen mode on mobile devices
-    openFullScreen();
-
     // filling colorArr with generated colors
-    $(Object.values(dataObj.players)).each((ind, item) => {
-        colorArr.push(item)
-    });
-
+    let tempArr = Object.values(dataObj.players);
+    $(originalColorArr).each((ind, item)=>{
+        if(tempArr.includes(item))
+            colorArr.push(item);
+    })
+    
+    
     // placing tokens in corresponding places
     $(colorArr).each((ind, item) => {
         let box = $('#' + item + '_box');
         box.find('.token_home > div').html('<div class="rounded-circle m-auto border token token_' + item + '"></div>');
     })
 
+
+
+
     // setting random turn
     turnSetter();
+
+
 
     // loading ludo board after setup
     $('#mainContainer').show();
 }
 
 
+
+
 // sets turn and rotates board
 
 function turnSetter() {
-    counter = (counter === undefined) ? (Math.floor(Math.random() * colorArr.length)) : ((++counter) % colorArr.length);
-    turnOf = colorArr[counter];
+
+    let playerCount = colorArr.length;
+    counter = (counter === undefined) ? (Math.floor(Math.random() * playerCount)) : ((++counter) % playerCount);
+    curTurn = colorArr[counter];
 
     if ($(window).width() >= 1024) {
-        let curInd = originalColorArr.indexOf(turnOf);
+        let curInd = originalColorArr.indexOf(curTurn);
         let prevInd = originalColorArr.indexOf(prevTurn);
-        // angleOfRotation -= Math.abs(curInd - prevInd) * (90);
-        // $('#ludoBoard').css("transform", "rotateZ(" + angleOfRotation + "deg)");
 
-        // console.log(counter, turnOf, prevTurn, angleOfRotation)
+        while (prevInd != curInd) {
+            angleOfRotation -= 90;
+            prevInd = (++prevInd) % originalColorArr.length;
+        }
+        $('#ludoBoard').css("transform", "rotateZ(" + angleOfRotation + "deg)");
 
-        // prevTurn = turnOf;
+        prevTurn = curTurn;
     }
-}
-
-
-function openFullScreen() {
-    element = $('html').get(0);
-    element.scrollIntoView(false);
 }
