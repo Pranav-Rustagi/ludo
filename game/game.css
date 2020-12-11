@@ -561,7 +561,7 @@ body {
     }
 
     #ludoBoard {
-        transition: transform 5s cubic-bezier(0, 0.75, 0.25, 1);
+        transition: transform 1s ease;
     }
 }
 
