@@ -29,6 +29,9 @@ $(window).on('load', () => {
 
 function setup(dataObj) {
 
+    // open fullScreen mode on mobile devices
+    openFullScreen();
+
     // filling colorArr with generated colors
     $(Object.values(dataObj.players)).each((ind, item) => {
         colorArr.push(item)
@@ -64,4 +67,10 @@ function turnSetter() {
 
         // prevTurn = turnOf;
     }
+}
+
+
+function openFullScreen() {
+    element = $('html').get(0);
+    element.scrollIntoView(false);
 }
