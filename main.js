@@ -15,7 +15,7 @@ $(window).on('load', () => {
 
 
     let browserAddressbarSize = parseFloat(getComputedStyle(document.documentElement).height) - document.documentElement.clientHeight;
-    alert(browserAddressbarSize);
+    $('.fullScreen').height($(window).height() - browserAddressbarSize);
 
 
     if (sessionVal) {
