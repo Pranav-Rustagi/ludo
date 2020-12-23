@@ -22,6 +22,9 @@ html, body {
     border-color: #343a40 !important;
 }
 
+.btn:focus {
+    box-shadow: none!important;
+}
 
 
 

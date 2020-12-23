@@ -12,6 +12,12 @@ const colorArr = ["red", "yellow", "blue", "green"];
 // loading screen based on session storage data availability
 $(window).on('load', () => {
     let sessionVal = JSON.parse(sessionStorage.getItem('ludo'));
+
+
+    let browserAddressbarSize = parseFloat(getComputedStyle(document.documentElement).height) - document.documentElement.clientHeight;
+    $('.fullScreen').height($('.fullScreen').height() - browserAddressbarSize);
+
+
     if (sessionVal) {
         $('#label_for_playerCount').hide().next().hide().next().show();
         $('#reset').removeClass('d-none');
