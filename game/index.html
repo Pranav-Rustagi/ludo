@@ -28,266 +28,267 @@
     <!-- main game ui -->
     <div id="mainContainer" class="row fullScreen d-none">
 
-    <!-- ludo board -->
-    <div id="ludoBoard" class="bg-dark m-auto">
+        <!-- ludo board -->
+        <div id="ludoBoard" class="bg-dark m-auto">
 
-        <!-- row1 -->
-        <div class="row rowEndings border border-bottom-0">
+            <!-- row1 -->
+            <div class="row rowEndings border border-bottom-0">
 
-            <!-- red box -->
-            <div class="col bg-danger border d-flex" id="red_box">
-                <div class="outBox border m-auto d-flex align-content-around flex-column">
-                    <div class="row">
-                        <div class="token_home col d-flex">
-                            <div class="border rounded-circle m-auto bg-danger d-flex"></div>
+                <!-- red box -->
+                <div class="col bg-danger border d-flex" id="red_box">
+                    <div class="outBox border m-auto d-flex align-content-around flex-column">
+                        <div class="row">
+                            <div class="token_home col d-flex">
+                                <div class="border rounded-circle m-auto bg-danger d-flex"></div>
+                            </div>
+                            <div class="token_home col d-flex">
+                                <div class="border rounded-circle m-auto bg-danger d-flex"></div>
+                            </div>
                         </div>
-                        <div class="token_home col d-flex">
-                            <div class="border rounded-circle m-auto bg-danger d-flex"></div>
+                        <div class="row">
+                            <div class="token_home col d-flex">
+                                <div class="border rounded-circle m-auto bg-danger d-flex"></div>
+                            </div>
+                            <div class="token_home col d-flex">
+                                <div class="border rounded-circle m-auto bg-danger d-flex"></div>
+                            </div>
                         </div>
                     </div>
+                </div>
+
+                <!-- path -->
+                <div class="bg-dark">
                     <div class="row">
-                        <div class="token_home col d-flex">
-                            <div class="border rounded-circle m-auto bg-danger d-flex"></div>
+                        <div class="col border d-flex" data-index="" data-next=""></div>
+                        <div class="col border d-flex" data-index="" data-next="" data-green="true" data-green-next="">
                         </div>
-                        <div class="token_home col d-flex">
-                            <div class="border rounded-circle m-auto bg-danger d-flex"></div>
+                        <div class="col border d-flex" data-index="" data-next=""></div>
+                    </div>
+                    <div class="row">
+                        <div class="col border d-flex" data-index="" data-next=""></div>
+                        <div class="col border bg-success d-flex" data-index="" data-next=""></div>
+                        <div class="col border bg-success d-flex" data-index="" data-next=""></div>
+                    </div>
+                    <div class="row">
+                        <div class="col border d-flex bg-danger" data-index="" data-next="">
+                            <svg viewBox="0 0 16 16" class="bi bi-star-fill m-auto" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                            </svg>
+                        </div>
+                        <div class="col border bg-success d-flex" data-index="" data-next=""></div>
+                        <div class="col border d-flex" data-index="" data-next=""></div>
+                    </div>
+                    <div class="row">
+                        <div class="col border d-flex" data-index="" data-next=""></div>
+                        <div class="col border bg-success d-flex" data-index="" data-next=""></div>
+                        <div class="col border d-flex" data-index="" data-next=""></div>
+                    </div>
+                    <div class="row">
+                        <div class="col border d-flex" data-index="" data-next=""></div>
+                        <div class="col border bg-success d-flex" data-index="" data-next=""></div>
+                        <div class="col border" data-index="" data-next=""></div>
+                    </div>
+                    <div class="row">
+                        <div class="col border d-flex" data-index="" data-next=""></div>
+                        <div class="col border bg-success" data-index="" data-next=""></div>
+                        <div class="col border" data-index="" data-next=""></div>
+                    </div>
+                </div>
+
+                <!-- green box -->
+                <div class="col bg-success border d-flex" id="green_box">
+                    <div class="outBox border m-auto d-flex align-content-around flex-column">
+                        <div class="row">
+                            <div class="token_home col d-flex">
+                                <div class="border rounded-circle m-auto bg-success d-flex"></div>
+                            </div>
+                            <div class="token_home col d-flex">
+                                <div class="border rounded-circle m-auto bg-success d-flex"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="token_home col d-flex">
+                                <div class="border rounded-circle m-auto bg-success d-flex"></div>
+                            </div>
+                            <div class="token_home col d-flex">
+                                <div class="border rounded-circle m-auto bg-success d-flex"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- path -->
-            <div class="bg-dark">
-                <div class="row">
-                    <div class="col border d-flex" data-index="" data-next=""></div>
-                    <div class="col border d-flex" data-index="" data-next="" data-green="true" data-green-next="">
+
+            <!-- row2 -->
+            <div class="row rowMid">
+
+                <!-- path -->
+                <div class="col border border-right-0 bg-dark">
+                    <div class="row">
+                        <div class="col border d-flex" data-index="" data-next=""></div>
+                        <div class="col border bg-danger d-flex" data-index="" data-next=""></div>
+                        <div class="col border d-flex" data-index="" data-next=""></div>
+                        <div class="col border d-flex" data-index="" data-next=""></div>
+                        <div class="col border d-flex" data-index="" data-next=""></div>
+                        <div class="col border d-flex" data-index="" data-next=""></div>
                     </div>
-                    <div class="col border d-flex" data-index="" data-next=""></div>
-                </div>
-                <div class="row">
-                    <div class="col border d-flex" data-index="" data-next=""></div>
-                    <div class="col border bg-success d-flex" data-index="" data-next=""></div>
-                    <div class="col border bg-success d-flex" data-index="" data-next=""></div>
-                </div>
-                <div class="row">
-                    <div class="col border d-flex bg-danger" data-index="" data-next="">
-                        <svg viewBox="0 0 16 16" class="bi bi-star-fill m-auto" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                        </svg>
+                    <div class="row">
+                        <div class="col border d-flex" data-index="" data-next="" data-red="true" data-red-next="">
+                        </div>
+                        <div class="col border bg-danger d-flex" data-index="" data-next=""></div>
+                        <div class="col border bg-danger d-flex" data-index="" data-next=""></div>
+                        <div class="col border bg-danger d-flex" data-index="" data-next=""></div>
+                        <div class="col border bg-danger d-flex" data-index="" data-next=""></div>
+                        <div class="col border bg-danger d-flex" data-index="" data-next=""></div>
                     </div>
-                    <div class="col border bg-success d-flex" data-index="" data-next=""></div>
-                    <div class="col border d-flex" data-index="" data-next=""></div>
+                    <div class="row">
+                        <div class="col border d-flex" data-index="" data-next=""></div>
+                        <div class="col border d-flex" data-index="" data-next=""></div>
+                        <div class="col border d-flex bg-primary" data-index="" data-next="">
+                            <svg viewBox="0 0 16 16" class="bi bi-star-fill m-auto" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                            </svg>
+                        </div>
+                        <div class="col border d-flex" data-index="" data-next=""></div>
+                        <div class="col border d-flex" data-index="" data-next=""></div>
+                        <div class="col border d-flex" data-index="" data-next=""></div>
+                    </div>
                 </div>
-                <div class="row">
-                    <div class="col border d-flex" data-index="" data-next=""></div>
-                    <div class="col border bg-success d-flex" data-index="" data-next=""></div>
-                    <div class="col border d-flex" data-index="" data-next=""></div>
+
+                <!-- victory box -->
+                <div class="d-flex position-relative">
+                    <div class="victoryBox m-auto"></div>
+                    <div class="diagonal border"></div>
+                    <div class="diagonal border"></div>
                 </div>
-                <div class="row">
-                    <div class="col border d-flex" data-index="" data-next=""></div>
-                    <div class="col border bg-success d-flex" data-index="" data-next=""></div>
-                    <div class="col border" data-index="" data-next=""></div>
-                </div>
-                <div class="row">
-                    <div class="col border d-flex" data-index="" data-next=""></div>
-                    <div class="col border bg-success" data-index="" data-next=""></div>
-                    <div class="col border" data-index="" data-next=""></div>
+
+                <!-- path -->
+                <div class="col border border-left-0 bg-dark">
+                    <div class="row">
+                        <div class="col border d-flex" data-index="" data-next=""></div>
+                        <div class="col border d-flex" data-index="" data-next=""></div>
+                        <div class="col border d-flex" data-index="" data-next=""></div>
+                        <div class="col border d-flex bg-success" data-index="" data-next="">
+                            <svg viewBox="0 0 16 16" class="bi bi-star-fill m-auto" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                            </svg>
+                        </div>
+                        <div class="col border d-flex" data-index="" data-next=""></div>
+                        <div class="col border d-flex" data-index="" data-next=""></div>
+                    </div>
+                    <div class="row">
+                        <div class="col border bg-warning d-flex" data-index="" data-next=""></div>
+                        <div class="col border bg-warning d-flex" data-index="" data-next=""></div>
+                        <div class="col border bg-warning d-flex" data-index="" data-next=""></div>
+                        <div class="col border bg-warning d-flex" data-index="" data-next=""></div>
+                        <div class="col border bg-warning d-flex" data-index="" data-next=""></div>
+                        <div class="col border d-flex" data-index="" data-next="" data-yellow="true"
+                            data-yellow-next="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col border d-flex" data-index="" data-next=""></div>
+                        <div class="col border d-flex" data-index="" data-next=""></div>
+                        <div class="col border d-flex" data-index="" data-next=""></div>
+                        <div class="col border d-flex" data-index="" data-next=""></div>
+                        <div class="col border bg-warning d-flex" data-index="" data-next=""></div>
+                        <div class="col border d-flex" data-index="" data-next=""></div>
+                    </div>
                 </div>
             </div>
 
-            <!-- green box -->
-            <div class="col bg-success border d-flex" id="green_box">
-                <div class="outBox border m-auto d-flex align-content-around flex-column">
-                    <div class="row">
-                        <div class="token_home col d-flex">
-                            <div class="border rounded-circle m-auto bg-success d-flex"></div>
+            <!-- row3 -->
+            <div class="row rowEndings border border-top-0">
+
+                <!-- blue box -->
+                <div class="col bg-primary border d-flex" id="blue_box">
+                    <div class="outBox border m-auto d-flex align-content-around flex-column">
+                        <div class="row">
+                            <div class="token_home col d-flex">
+                                <div class="border rounded-circle m-auto bg-primary d-flex"></div>
+                            </div>
+                            <div class="token_home col d-flex">
+                                <div class="border rounded-circle m-auto bg-primary d-flex"></div>
+                            </div>
                         </div>
-                        <div class="token_home col d-flex">
-                            <div class="border rounded-circle m-auto bg-success d-flex"></div>
+                        <div class="row">
+                            <div class="token_home col d-flex">
+                                <div class="border rounded-circle m-auto bg-primary d-flex"></div>
+                            </div>
+                            <div class="token_home col d-flex">
+                                <div class="border rounded-circle m-auto bg-primary d-flex"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- path -->
+                <div class="bg-dark">
+                    <div class="row">
+                        <div class="col border d-flex" data-index="" data-next=""></div>
+                        <div class="col border bg-primary d-flex" data-index="" data-next=""></div>
+                        <div class="col border d-flex" data-index="" data-next=""></div>
+                    </div>
+                    <div class="row">
+                        <div class="col border d-flex" data-index="" data-next=""></div>
+                        <div class="col border bg-primary d-flex" data-index="" data-next=""></div>
+                        <div class="col border" data-index="" data-next=""></div>
+                    </div>
+                    <div class="row">
+                        <div class="col border d-flex" data-index="" data-next=""></div>
+                        <div class="col border bg-primary d-flex" data-index="" data-next=""></div>
+                        <div class="col border d-flex" data-index="" data-next=""></div>
+                    </div>
+                    <div class="row">
+                        <div class="col border d-flex" data-index="" data-next=""></div>
+                        <div class="col border bg-primary d-flex" data-index="" data-next=""></div>
+                        <div class="col border d-flex bg-warning" data-index="" data-next="">
+                            <svg viewBox="0 0 16 16" class="bi bi-star-fill m-auto" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                            </svg>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="token_home col d-flex">
-                            <div class="border rounded-circle m-auto bg-success d-flex"></div>
+                        <div class="col border bg-primary d-flex" data-index="" data-next=""></div>
+                        <div class="col border bg-primary d-flex" data-index="" data-next=""></div>
+                        <div class="col border d-flex" data-index="" data-next=""></div>
+                    </div>
+                    <div class="row">
+                        <div class="col border d-flex" data-index="" data-next=""></div>
+                        <div class="col border d-flex" data-index="" data-next="" data-blue="true" data-blue-next="">
                         </div>
-                        <div class="token_home col d-flex">
-                            <div class="border rounded-circle m-auto bg-success d-flex"></div>
+                        <div class="col border d-flex" data-index="" data-next=""></div>
+                    </div>
+                </div>
+
+                <!-- yellow box -->
+                <div class="col bg-warning border d-flex" id="yellow_box">
+                    <div class="outBox border m-auto d-flex align-content-around flex-column">
+                        <div class="row">
+                            <div class="token_home col d-flex">
+                                <div class="border rounded-circle m-auto bg-warning d-flex"></div>
+                            </div>
+                            <div class="token_home col d-flex">
+                                <div class="border rounded-circle m-auto bg-warning d-flex"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="token_home col d-flex">
+                                <div class="border rounded-circle m-auto bg-warning d-flex"></div>
+                            </div>
+                            <div class="token_home col d-flex">
+                                <div class="border rounded-circle m-auto bg-warning d-flex"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
-
-
-        <!-- row2 -->
-        <div class="row rowMid">
-
-            <!-- path -->
-            <div class="col border border-right-0 bg-dark">
-                <div class="row">
-                    <div class="col border d-flex" data-index="" data-next=""></div>
-                    <div class="col border bg-danger d-flex" data-index="" data-next=""></div>
-                    <div class="col border d-flex" data-index="" data-next=""></div>
-                    <div class="col border d-flex" data-index="" data-next=""></div>
-                    <div class="col border d-flex" data-index="" data-next=""></div>
-                    <div class="col border d-flex" data-index="" data-next=""></div>
-                </div>
-                <div class="row">
-                    <div class="col border d-flex" data-index="" data-next="" data-red="true" data-red-next="">
-                    </div>
-                    <div class="col border bg-danger d-flex" data-index="" data-next=""></div>
-                    <div class="col border bg-danger d-flex" data-index="" data-next=""></div>
-                    <div class="col border bg-danger d-flex" data-index="" data-next=""></div>
-                    <div class="col border bg-danger d-flex" data-index="" data-next=""></div>
-                    <div class="col border bg-danger d-flex" data-index="" data-next=""></div>
-                </div>
-                <div class="row">
-                    <div class="col border d-flex" data-index="" data-next=""></div>
-                    <div class="col border d-flex" data-index="" data-next=""></div>
-                    <div class="col border d-flex bg-primary" data-index="" data-next="">
-                        <svg viewBox="0 0 16 16" class="bi bi-star-fill m-auto" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                        </svg>
-                    </div>
-                    <div class="col border d-flex" data-index="" data-next=""></div>
-                    <div class="col border d-flex" data-index="" data-next=""></div>
-                    <div class="col border d-flex" data-index="" data-next=""></div>
-                </div>
-            </div>
-
-            <!-- victory box -->
-            <div class="d-flex position-relative">
-                <div class="victoryBox m-auto"></div>
-                <div class="diagonal border"></div>
-                <div class="diagonal border"></div>
-            </div>
-
-            <!-- path -->
-            <div class="col border border-left-0 bg-dark">
-                <div class="row">
-                    <div class="col border d-flex" data-index="" data-next=""></div>
-                    <div class="col border d-flex" data-index="" data-next=""></div>
-                    <div class="col border d-flex" data-index="" data-next=""></div>
-                    <div class="col border d-flex bg-success" data-index="" data-next="">
-                        <svg viewBox="0 0 16 16" class="bi bi-star-fill m-auto" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                        </svg>
-                    </div>
-                    <div class="col border d-flex" data-index="" data-next=""></div>
-                    <div class="col border d-flex" data-index="" data-next=""></div>
-                </div>
-                <div class="row">
-                    <div class="col border bg-warning d-flex" data-index="" data-next=""></div>
-                    <div class="col border bg-warning d-flex" data-index="" data-next=""></div>
-                    <div class="col border bg-warning d-flex" data-index="" data-next=""></div>
-                    <div class="col border bg-warning d-flex" data-index="" data-next=""></div>
-                    <div class="col border bg-warning d-flex" data-index="" data-next=""></div>
-                    <div class="col border d-flex" data-index="" data-next="" data-yellow="true" data-yellow-next="">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col border d-flex" data-index="" data-next=""></div>
-                    <div class="col border d-flex" data-index="" data-next=""></div>
-                    <div class="col border d-flex" data-index="" data-next=""></div>
-                    <div class="col border d-flex" data-index="" data-next=""></div>
-                    <div class="col border bg-warning d-flex" data-index="" data-next=""></div>
-                    <div class="col border d-flex" data-index="" data-next=""></div>
-                </div>
-            </div>
-        </div>
-
-        <!-- row3 -->
-        <div class="row rowEndings border border-top-0">
-
-            <!-- blue box -->
-            <div class="col bg-primary border d-flex" id="blue_box">
-                <div class="outBox border m-auto d-flex align-content-around flex-column">
-                    <div class="row">
-                        <div class="token_home col d-flex">
-                            <div class="border rounded-circle m-auto bg-primary d-flex"></div>
-                        </div>
-                        <div class="token_home col d-flex">
-                            <div class="border rounded-circle m-auto bg-primary d-flex"></div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="token_home col d-flex">
-                            <div class="border rounded-circle m-auto bg-primary d-flex"></div>
-                        </div>
-                        <div class="token_home col d-flex">
-                            <div class="border rounded-circle m-auto bg-primary d-flex"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- path -->
-            <div class="bg-dark">
-                <div class="row">
-                    <div class="col border d-flex" data-index="" data-next=""></div>
-                    <div class="col border bg-primary d-flex" data-index="" data-next=""></div>
-                    <div class="col border d-flex" data-index="" data-next=""></div>
-                </div>
-                <div class="row">
-                    <div class="col border d-flex" data-index="" data-next=""></div>
-                    <div class="col border bg-primary d-flex" data-index="" data-next=""></div>
-                    <div class="col border" data-index="" data-next=""></div>
-                </div>
-                <div class="row">
-                    <div class="col border d-flex" data-index="" data-next=""></div>
-                    <div class="col border bg-primary d-flex" data-index="" data-next=""></div>
-                    <div class="col border d-flex" data-index="" data-next=""></div>
-                </div>
-                <div class="row">
-                    <div class="col border d-flex" data-index="" data-next=""></div>
-                    <div class="col border bg-primary d-flex" data-index="" data-next=""></div>
-                    <div class="col border d-flex bg-warning" data-index="" data-next="">
-                        <svg viewBox="0 0 16 16" class="bi bi-star-fill m-auto" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col border bg-primary d-flex" data-index="" data-next=""></div>
-                    <div class="col border bg-primary d-flex" data-index="" data-next=""></div>
-                    <div class="col border d-flex" data-index="" data-next=""></div>
-                </div>
-                <div class="row">
-                    <div class="col border d-flex" data-index="" data-next=""></div>
-                    <div class="col border d-flex" data-index="" data-next="" data-blue="true" data-blue-next="">
-                    </div>
-                    <div class="col border d-flex" data-index="" data-next=""></div>
-                </div>
-            </div>
-
-            <!-- yellow box -->
-            <div class="col bg-warning border d-flex" id="yellow_box">
-                <div class="outBox border m-auto d-flex align-content-around flex-column">
-                    <div class="row">
-                        <div class="token_home col d-flex">
-                            <div class="border rounded-circle m-auto bg-warning d-flex"></div>
-                        </div>
-                        <div class="token_home col d-flex">
-                            <div class="border rounded-circle m-auto bg-warning d-flex"></div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="token_home col d-flex">
-                            <div class="border rounded-circle m-auto bg-warning d-flex"></div>
-                        </div>
-                        <div class="token_home col d-flex">
-                            <div class="border rounded-circle m-auto bg-warning d-flex"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
     </div>
 
     <!-- custom js -->
