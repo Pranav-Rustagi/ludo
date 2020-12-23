@@ -12,7 +12,6 @@ var counter;
 var angleOfRotation = 0;
 
 
-
 // setting up game if session storage available else redirecting to home page
 
 $(window).on('load', () => {
@@ -29,14 +28,17 @@ $(window).on('load', () => {
 
 function setup(dataObj) {
 
+    let browserAddressbarSize = parseFloat(getComputedStyle(document.documentElement).height) - document.documentElement.clientHeight;
+    $('.fullScreen').height($('.fullScreen').height() - browserAddressbarSize);
+
     // filling colorArr with generated colors
     let tempArr = Object.values(dataObj.players);
-    $(originalColorArr).each((ind, item)=>{
-        if(tempArr.includes(item))
+    $(originalColorArr).each((ind, item) => {
+        if (tempArr.includes(item))
             colorArr.push(item);
     })
-    
-    
+
+
     // placing tokens in corresponding places
     $(colorArr).each((ind, item) => {
         let box = $('#' + item + '_box');
@@ -52,7 +54,7 @@ function setup(dataObj) {
 
 
     // loading ludo board after setup
-    $('#mainContainer').show();
+    $('#mainContainer').removeClass('d-none');
 }
 
 
@@ -78,4 +80,24 @@ function turnSetter() {
 
         prevTurn = curTurn;
     }
+}
+
+
+
+
+var timeOutVar;
+$(window).resize(() => {
+    clearTimeout(timeOutVar);
+    timeOutVar = setTimeout(resizeConf, 100);
+})
+
+
+function resizeConf(){
+    let wWidth = $(window).width();
+    let wHeight = $(window).height();
+    let unableMsgShow = false;
+
+    // if(wWidth > wHeight){
+        
+    // }
 }
