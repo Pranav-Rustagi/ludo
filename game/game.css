@@ -5,9 +5,9 @@ html, body {
 
 
 
-/******************************\
-|* modified bootstrap classes *|
-\******************************/
+/****************************************\
+|****** modified bootstrap classes ******|
+\****************************************/
 
 .row {
     margin: 0 !important;
@@ -28,9 +28,9 @@ html, body {
 
 
 
-/*********************\
-|*** Custom styles ***|
-\*********************/
+/*****************************************************************\
+|************************* Custom styles *************************|
+\*****************************************************************/
 
 body {
     background: -webkit-radial-gradient(center, #5091dd 0%, #030617 100%);
@@ -44,6 +44,7 @@ body {
     height: 100vh;
     width: 100vw;
 }
+
 
 #grid_pattern {
     width: 100%;
@@ -240,6 +241,7 @@ body {
         0px 2982px #030617, 0px 2985px #030617, 0px 2988px #030617, 0px 2991px #030617, 0px 2994px #030617,
         0px 2997px #030617, 0px 3000px #030617;
 }
+
 #grid_pattern:after {
     content: "";
     position: absolute;
@@ -456,8 +458,7 @@ body {
     height: 18vh;
 }
 
-.rowEndings > div:nth-child(2),
-.rowMid > div:nth-child(2) {
+.rowEndings > div:nth-child(2), .rowMid > div:nth-child(2) {
     width: 18vh;
 }
 
@@ -521,27 +522,28 @@ body {
 .token {
     width: 5vh;
     height: 5vh;
+    cursor: grab;
     border-width: 2px !important;
 }
 
 .token_green {
     background: #066b1e;
-    /* box-shadow: #28a745 0 2px 0px, #000 0px 3px 0px; */
+    /* box-shadow: #28a745 0 1px 0px, #000 0px 3px 0px; */
 }
 
 .token_red {
     background: #a51423;
-    /* box-shadow: #dc3545 0 2px 0px, #000 0px 3px 0px; */
+    /* box-shadow: #dc3545 0 1px 0px, #000 0px 3px 0px; */
 }
 
 .token_blue {
     background: #0550a1;
-    /* box-shadow: #007bff 0 2px 0px, #000 0px 3px 0px; */
+    /* box-shadow: #007bff 0 1px 0px, #000 0px 3px 0px; */
 }
 
 .token_yellow {
     background: #dba607;
-    /* box-shadow: #ffc107 0 2px 0px, #000 0px 3px 0px; */
+    /* box-shadow: #ffc107 0 1px 0px, #000 0px 3px 0px; */
 }
 
 #ludoBoard > div svg {
@@ -552,6 +554,65 @@ body {
 
 
 
+/*****************************\
+|********* Ludo Dice *********|
+\*****************************/
+
+#dice{
+    width: 7.5vh;
+    transition: transform 0.6s;
+    height: 7.5vh;
+    z-index: 50;
+    cursor: grab;
+    left: calc(90vh + ((100vw - 90vh) / 2) + ((100vw - 90vh) / 4));
+    transform: rotateX(-35deg) translateZ(-10vh) translateX(7.5vh);
+    bottom: 10vh;
+    transform-style: preserve-3d;
+}
+
+#dice *:not(.dot){
+    /* background-color: #ffcbad; */
+    background-color: #a51423;
+}
+
+.dice-face{
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border: 1px solid rgb(75, 21, 21);
+    backface-visibility: hidden;
+}
+
+.dice-face-front{
+    transform: translate3d(0, 0, 3.73vh);
+}
+
+.dice-face-back{
+    transform: rotateY(180deg) translate3d(0, 0, 3.73vh);
+}
+.dice-face-left{
+    transform: rotateY(-90deg) translate3d(0, 0, 3.73vh);
+}
+.dice-face-right{
+    transform: rotateY(90deg) translate3d(0, 0, 3.73vh);
+}
+.dice-face-top{
+    transform: rotateX(90deg) translate3d(0, 0, 3.73vh);
+}
+.dice-face-bottom{
+    transform: rotateX(-90deg) translate3d(0, 0, 3.73vh);
+}
+
+
+.dot{
+    margin: auto;
+    /* background-color: rgb(39, 39, 39); */
+    background-color: var(--light);
+    width: 1vh;
+    height: 1vh;
+    border-radius: 100%;
+}
+
 
 /***************************\
 |****** Media Queries ******|
@@ -560,7 +621,8 @@ body {
 @media (min-width: 1024px) {
 
     #mainContainer{
-        transform: rotateX(45deg) translateY(-5vh);
+        transform: rotateX(55deg) translateY(-5vh);
+        background-color: rgba(0, 0, 0, 0.25);
     }
 
     #ludoBoard {

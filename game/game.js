@@ -28,8 +28,12 @@ $(window).on('load', () => {
 
 function setup(dataObj) {
 
-    let browserAddressbarSize = parseFloat(getComputedStyle(document.documentElement).height) - document.documentElement.clientHeight;
-    $('.fullScreen').height($('.fullScreen').height() - browserAddressbarSize);
+    // subtracting browser addressbar height in mobile view
+    if ($(window).width() < $(window).height()) {
+        let browserAddressbarSize = parseFloat(getComputedStyle(document.documentElement).height) - document.documentElement.clientHeight;
+        $('.fullScreen').height($('.fullScreen').height() - browserAddressbarSize);
+    }
+
 
     // filling colorArr with generated colors
     let tempArr = Object.values(dataObj.players);
@@ -92,12 +96,7 @@ $(window).resize(() => {
 })
 
 
-function resizeConf(){
-    let wWidth = $(window).width();
-    let wHeight = $(window).height();
-    let unableMsgShow = false;
-
-    // if(wWidth > wHeight){
-        
-    // }
+function resizeConf() {
+    alert("The page needs to be refreshed!");
+    location.reload();
 }

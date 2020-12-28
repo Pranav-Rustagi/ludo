@@ -19,7 +19,7 @@
 
 </head>
 
-<body class="fullScreen d-flex">
+<body class="fullScreen d-flex position-relative">
 
     <div class="position-fixed fullScreen">
         <div id="grid_pattern"></div>
@@ -287,9 +287,124 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
+
+    <!-- dice container -->
+    <div id="dice" class="position-fixed">
+
+        <!-- dice face front 1 -->
+        <div class="dice-face dice-face-front row" data-val="1">
+            <div class="dot"></div>
+        </div>
+
+        <!-- dice face back 6 -->
+        <div class="dice-face dice-face-back row flex-column p-2" data-val="6">
+            <div class="col row">
+                <div class="col d-flex">
+                    <div class="dot"></div>
+                </div>
+                <div class="col d-flex">
+                    <div class="dot"></div>
+                </div>
+            </div>
+            <div class="col row">
+                <div class="col d-flex">
+                    <div class="dot"></div>
+                </div>
+                <div class="col d-flex">
+                    <div class="dot"></div>
+                </div>
+            </div>
+            <div class="col row">
+                <div class="col d-flex">
+                    <div class="dot"></div>
+                </div>
+                <div class="col d-flex">
+                    <div class="dot"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- dice face left 2 -->
+        <div class="dice-face dice-face-left row flex-column p-2" data-val="2">
+            <div class="col row">
+                <div class="col d-flex">
+                    <div class="dot"></div>
+                </div>
+                <div class="col"></div>
+            </div>
+            <div class="col row">
+                <div class="col"></div>
+                <div class="col d-flex">
+                    <div class="dot"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- dice face right 5 -->
+        <div class="dice-face dice-face-right row p-2" data-val="5">
+            <div class="col row flex-column">
+                <div class="col d-flex">
+                    <div class="dot"></div>
+                </div>
+                <div class="col d-flex">
+                    <div class="dot"></div>
+                </div>
+            </div>
+            <div class="col row">
+                <div class="dot"></div>
+            </div>
+            <div class="col row flex-column">
+                <div class="col d-flex">
+                    <div class="dot"></div>
+                </div>
+                <div class="col d-flex">
+                    <div class="dot"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- dice face top 3 -->
+        <div class="dice-face dice-face-top row p-2 flex-column" data-val="3">
+            <div class="row col">
+                <div class="col">
+                    <div class="dot"></div>
+                </div>
+                <div class="col"></div>
+            </div>
+            <div class="row col">
+                <div class="dot"></div>
+            </div>
+            <div class="row col">
+                <div class="col"></div>
+                <div class="col">
+                    <div class="dot"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- dice face bottom 4 -->
+        <div class="dice-face dice-face-bottom row p-2" data-val="4">
+            <div class="col row flex-column">
+                <div class="col d-flex">
+                    <div class="dot"></div>
+                </div>
+                <div class="col d-flex">
+                    <div class="dot"></div>
+                </div>
+            </div>
+            <div class="col row flex-column">
+                <div class="col d-flex">
+                    <div class="dot"></div>
+                </div>
+                <div class="col d-flex">
+                    <div class="dot"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- custom js -->
     <script src="./game.js"></script>
