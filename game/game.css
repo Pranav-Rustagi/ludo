@@ -5,9 +5,9 @@ html, body {
 
 
 
-/****************************************\
-|****** modified bootstrap classes ******|
-\****************************************/
+/**********************************************************************\
+|********************* modified bootstrap classes *********************|
+\**********************************************************************/
 
 .row {
     margin: 0 !important;
@@ -45,7 +45,7 @@ body {
     width: 100vw;
 }
 
-
+/* grid pattern in background */
 #grid_pattern {
     width: 100%;
     z-index: 0;
@@ -439,21 +439,25 @@ body {
         2997px 0px #030617, 3000px 0px #030617;
 }
 
+/* container for ludo board and other elements */
 #mainContainer {
     align-items: center;
     justify-content: flex-start;
 }
 
+/* ludo board */
 #ludoBoard {
     height: 90vh;
     width: 90vh;
     box-shadow: 0 1px 0 0 #000;
 }
 
+/* rows containing home boxes */
 .rowEndings {
     height: 36vh;
 }
 
+/* row containing victory box */
 .rowMid {
     height: 18vh;
 }
@@ -492,6 +496,7 @@ body {
     border-style: solid;
 }
 
+/* diagonals in victory box */
 .diagonal {
     border-width: 0px !important;
     border-top-width: 0.25vh !important;
@@ -554,13 +559,19 @@ body {
 
 
 
-/*****************************\
-|********* Ludo Dice *********|
-\*****************************/
+/*****************************************************************************\
+|********************************* Ludo Dice *********************************|
+\*****************************************************************************/
+
+
+/************************\
+|* main dice components *|
+\************************/
 
 #dice{
     width: 7.5vh;
-    transition: transform 0.6s;
+    /* transition: transform 0.6s; */
+    /* transition: all 0.85s cubic-bezier(0.175,0.885,0.320,1.275); */
     height: 7.5vh;
     z-index: 50;
     cursor: grab;
@@ -571,9 +582,21 @@ body {
 }
 
 #dice *:not(.dot){
-    /* background-color: #ffcbad; */
     background-color: #a51423;
 }
+
+.dot{
+    margin: auto;
+    background-color: var(--light);
+    width: 1vh;
+    height: 1vh;
+    border-radius: 100%;
+}
+
+
+/************************\
+|****** dice faces ******|
+\************************/
 
 .dice-face{
     position: absolute;
@@ -604,14 +627,35 @@ body {
 }
 
 
-.dot{
-    margin: auto;
-    /* background-color: rgb(39, 39, 39); */
-    background-color: var(--light);
-    width: 1vh;
-    height: 1vh;
-    border-radius: 100%;
+/************************\
+|**** states of dice ****|
+\************************/
+
+#dice.dice-active-one{
+    transform: rotateX(55deg) translateX(7.5vh) translateY(-10vh);
 }
+
+#dice.dice-active-three{
+    transform: rotateX(-35deg) translateZ(-10vh) translateX(7.5vh);
+}
+
+#dice.dice-active-four{
+    transform: rotateX(145deg) translateX(7.5vh) translateZ(10vh);
+}
+
+#dice.dice-active-six{
+    transform: rotateX(235deg) translateX(7.5vh) translateY(10vh);
+}
+
+/**************************\
+|**** Adding animation ****|
+\**************************/
+
+/* .dice-roll-to-one{
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+} */
+
+
 
 
 /***************************\
@@ -629,8 +673,6 @@ body {
         transition: transform 1s ease;
     }
 }
-
-
 
 
 @media (orientation: portrait) {
@@ -685,3 +727,14 @@ body {
         height: 5vw;
     }
 }
+
+
+
+
+/****************************************************************************\
+|******************************** Animations ********************************|
+\****************************************************************************/
+
+/* @keyframes dice-roll-to-one {
+    
+} */
