@@ -6,25 +6,31 @@ const colorObj = {
 }
 const colorArr = [];
 const originalColorArr = ["blue", "red", "green", "yellow"];
+const diceStates = ["one", "two", "three", "four", "five", "six"];
 var curTurn;
 var prevTurn = "blue";
 var counter;
 var angleOfRotation = 0;
+var dice = $('#dice');
 
 
-// setting up game if session storage available else redirecting to home page
+
+
+/**********************************************************************************\
+|*** setting up game if session storage available else redirecting to home page ***|
+\**********************************************************************************/
 
 $(window).on('load', () => {
     let dataObj = JSON.parse(sessionStorage.getItem('ludo'));
-    if (dataObj && dataObj.playerNames)
-        setup(dataObj);
-    else
-        location.replace('./../');
+    (dataObj && dataObj.playerNames) ? setup(dataObj) : location.replace('./../');
 })
 
 
 
-// setting up game board
+
+/************************************************\
+|*** setting up game board and other elements ***|
+\************************************************/
 
 function setup(dataObj) {
 
@@ -35,7 +41,7 @@ function setup(dataObj) {
     }
 
 
-    // filling colorArr with generated colors
+    // populating colorArr with generated colors
     let tempArr = Object.values(dataObj.players);
     $(originalColorArr).each((ind, item) => {
         if (tempArr.includes(item))
@@ -50,11 +56,8 @@ function setup(dataObj) {
     })
 
 
-
-
     // setting random turn
     turnSetter();
-
 
 
     // loading ludo board after setup
@@ -64,7 +67,9 @@ function setup(dataObj) {
 
 
 
-// sets turn and rotates board
+/***********************************\
+|*** sets turn and rotates board ***|
+\***********************************/
 
 function turnSetter() {
 
@@ -84,19 +89,107 @@ function turnSetter() {
 
         prevTurn = curTurn;
     }
+
+    resetDice();
+
+    // binding events to dice
+    diceEventBinder();
 }
 
 
 
+
+/**********************\
+|*** event for dice ***|
+\**********************/
+
+function diceEventBinder() {
+    dice.on("click", () => {
+
+        let randomRoll = Math.floor(Math.random() * 6) + 1;
+        dice.addClass("dice-active-" + diceStates[randomRoll - 1]);
+
+        unbindEvents(true);
+
+        tokenEventBinder();
+    });
+}
+
+
+
+
+/******************************\
+|*** Binds events to tokens ***|
+\******************************/
+
+function tokenEventBinder() {
+    let tokens = $(".token_" + curTurn);
+    // tokens = tokensValid();
+
+    tokenEvent(tokens);
+}
+
+
+
+
+/************************\
+|*** Event for tokens ***|
+\************************/
+
+function tokenEvent(tokens) {
+    let diceClass = dice.attr("class").split(" ").filter((item)=> item.includes("dice-active"))[0];
+    let stateNo = diceStates.indexOf(diceClass.split("-")[2]) + 1;
+
+    tokens.on("click", function() {
+        let token = $(this);
+        if(token.closest('.token_home')){
+            if(stateNo === 6){
+                token = token.detach();
+                setTimeout(()=>{
+                    $('[' + curTurn + '-start-box]').append(token);
+                    diceEventBinder();
+                }, 100);
+            }
+        }
+    })
+}
+
+
+
+
+/*****************************************************\
+|*** Unbinds the click events from dice and tokens ***|
+|************ true - Dice , false - Token ************|
+\*****************************************************/
+
+function unbindEvents(isDice) {
+    (isDice) ? $('#dice').off("click") : $('.token').off("click");
+}
+
+
+
+
+/****************************************\
+|*** Resets dice to its initial state ***|
+\****************************************/
+
+function resetDice() {
+    unbindEvents(false);
+    dice.removeClass("dice-active-one dice-active-two dice-active-three dice-active-four dice-active-five dice-active-six").addClass("dice-transition");
+}
+
+
+
+
+/****************************\
+|*** handles resize event ***|
+\****************************/
 
 var timeOutVar;
 $(window).resize(() => {
     clearTimeout(timeOutVar);
-    timeOutVar = setTimeout(resizeConf, 100);
+    timeOutVar = setTimeout(() => {
+        alert("The page needs to be refreshed!");
+        location.reload();
+    }, 250);
 })
-
-
-function resizeConf() {
-    alert("The page needs to be refreshed!");
-    location.reload();
-}
