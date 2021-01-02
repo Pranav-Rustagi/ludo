@@ -474,7 +474,7 @@ body {
     height: 6vh;
 }
 
-.rowMid > div:nth-child(2) div {
+.rowMid > div:nth-child(2) div:first-child {
     border-top-color: #28a745;
     border-left-color: #dc3545;
     border-bottom-color: #007bff;

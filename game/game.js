@@ -105,9 +105,8 @@ function turnSetter() {
 
 function diceEventBinder() {
     dice.on("click", () => {
-
         let randomRoll = Math.floor(Math.random() * 6) + 1;
-        dice.addClass("dice-active-" + diceStates[randomRoll - 1]);
+        resetDice("dice-active-" + diceStates[randomRoll - 1]);
 
         unbindEvents(true);
 
@@ -123,10 +122,38 @@ function diceEventBinder() {
 \******************************/
 
 function tokenEventBinder() {
-    let tokens = $(".token_" + curTurn);
-    // tokens = tokensValid();
+    let tokens = tokensValid();
+    (tokens.length) ? tokenEvent(tokens) : setTimeout(turnSetter, 1200);
+}
 
-    tokenEvent(tokens);
+
+
+
+/**************************************\
+|*** Returns tokens with valid move ***|
+\**************************************/
+
+function tokensValid(tokens) {
+    let diceClass = dice.attr("class").split(" ").filter((item) => item.includes("dice-active"))[0];
+    let stateNo = diceStates.indexOf(diceClass.split("-")[2]) + 1;
+
+    tokens = $(".token_" + curTurn).filter((ind, item) => {
+        item = $(item);
+        if (item.parent().parent().hasClass('token_home'))
+            return (stateNo === 6);
+        else {
+            let tempInd = item.parent().data("index");
+            let el;
+            for (let i = 0; i < stateNo; i++) {
+                tempInd = (el && el[0].hasAttribute("data-" + curTurn)) ? el.data(curTurn) : (++tempInd);
+                el = $('[data-index=' + tempInd + ']');
+            }
+            console.log(el[0]);
+            return el.length;
+        }
+    });
+
+    return tokens;
 }
 
 
@@ -137,20 +164,22 @@ function tokenEventBinder() {
 \************************/
 
 function tokenEvent(tokens) {
-    let diceClass = dice.attr("class").split(" ").filter((item)=> item.includes("dice-active"))[0];
+    let diceClass = dice.attr("class").split(" ").filter((item) => item.includes("dice-active"))[0];
     let stateNo = diceStates.indexOf(diceClass.split("-")[2]) + 1;
 
-    tokens.on("click", function() {
+    tokens.on("click", function () {
         let token = $(this);
-        if(token.closest('.token_home')){
-            if(stateNo === 6){
-                token = token.detach();
-                setTimeout(()=>{
+        if (token.closest('.token_home')) {
+            if (stateNo === 6) {
+                token = token.remove();
+                setTimeout(() => {
                     $('[' + curTurn + '-start-box]').append(token);
                     diceEventBinder();
-                }, 100);
+                }, 50);
             }
         }
+
+        unbindEvents(false);
     })
 }
 
@@ -173,9 +202,11 @@ function unbindEvents(isDice) {
 |*** Resets dice to its initial state ***|
 \****************************************/
 
-function resetDice() {
+function resetDice(diceState) {
     unbindEvents(false);
     dice.removeClass("dice-active-one dice-active-two dice-active-three dice-active-four dice-active-five dice-active-six").addClass("dice-transition");
+    if (diceState)
+        dice.addClass(diceState);
 }
 
 

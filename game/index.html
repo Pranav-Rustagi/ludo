@@ -21,9 +21,12 @@
 
 <body class="fullScreen d-flex position-relative">
 
+
+    <!-- grid design in the background -->
     <div class="position-fixed fullScreen">
         <div id="grid_pattern"></div>
     </div>
+
 
     <!-- main game ui -->
     <div id="mainContainer" class="row fullScreen d-none">
@@ -59,39 +62,38 @@
                 <!-- path -->
                 <div class="bg-dark">
                     <div class="row">
-                        <div class="col border d-flex" data-index="" data-next=""></div>
-                        <div class="col border d-flex" data-index="" data-next="" data-green="true" data-green-next=""></div>
-                        <div class="col border d-flex" data-index="" data-next=""></div>
+                        <div class="col border d-flex" data-index="1" data-next="2"></div>
+                        <div class="col border d-flex" data-index="2" data-next="3" data-green="53"></div>
+                        <div class="col border d-flex" data-index="3" data-next="4"></div>
                     </div>
                     <div class="row">
-                        <div class="col border d-flex" data-index="" data-next=""></div>
-                        <div class="col border bg-success d-flex" data-index="" data-next=""></div>
-                        <div class="col border bg-success d-flex" data-index="" data-next="" green-start-box></div>
+                        <div class="col border d-flex" data-index="52" data-next="1"></div>
+                        <div class="col border bg-success d-flex" data-index="53" data-next="54"></div>
+                        <div class="col border bg-success d-flex" data-index="4" data-next="5" green-start-box></div>
                     </div>
                     <div class="row">
-                        <div class="col border d-flex bg-danger" data-index="" data-next="">
+                        <div class="col border d-flex bg-danger" data-index="51" data-next="52">
                             <svg viewBox="0 0 16 16" class="bi bi-star-fill m-auto" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
                             </svg>
                         </div>
-                        <div class="col border bg-success d-flex" data-index="" data-next=""></div>
-                        <div class="col border d-flex" data-index="" data-next=""></div>
+                        <div class="col border bg-success d-flex" data-index="54" data-next="55"></div>
+                        <div class="col border d-flex" data-index="5" data-next="6"></div>
                     </div>
                     <div class="row">
-                        <div class="col border d-flex" data-index="" data-next=""></div>
-                        <div class="col border bg-success d-flex" data-index="" data-next=""></div>
-                        <div class="col border d-flex" data-index="" data-next=""></div>
+                        <div class="col border d-flex" data-index="50" data-next="51"></div>
+                        <div class="col border bg-success d-flex" data-index="55" data-next="56"></div>
+                        <div class="col border d-flex" data-index="6" data-next="7"></div>
                     </div>
                     <div class="row">
-                        <div class="col border d-flex" data-index="" data-next=""></div>
-                        <div class="col border bg-success d-flex" data-index="" data-next=""></div>
-                        <div class="col border" data-index="" data-next=""></div>
+                        <div class="col border d-flex" data-index="49" data-next="50"></div>
+                        <div class="col border bg-success d-flex" data-index="56" data-next="57"></div>
+                        <div class="col border" data-index="7" data-next="8"></div>
                     </div>
                     <div class="row">
-                        <div class="col border d-flex" data-index="" data-next=""></div>
-                        <div class="col border bg-success" data-index="" data-next=""></div>
-                        <div class="col border" data-index="" data-next=""></div>
+                        <div class="col border d-flex" data-index="48" data-next="49"></div>
+                        <div class="col border bg-success" data-index="57" data-next=""></div>
+                        <div class="col border" data-index="8" data-next="9"></div>
                     </div>
                 </div>
 
@@ -125,34 +127,32 @@
                 <!-- path -->
                 <div class="col border border-right-0 bg-dark">
                     <div class="row">
-                        <div class="col border d-flex" data-index="" data-next=""></div>
-                        <div class="col border bg-danger d-flex" data-index="" data-next="" red-start-box></div>
-                        <div class="col border d-flex" data-index="" data-next=""></div>
-                        <div class="col border d-flex" data-index="" data-next=""></div>
-                        <div class="col border d-flex" data-index="" data-next=""></div>
-                        <div class="col border d-flex" data-index="" data-next=""></div>
+                        <div class="col border d-flex" data-index="42" data-next="43"></div>
+                        <div class="col border bg-danger d-flex" data-index="43" data-next="44" red-start-box></div>
+                        <div class="col border d-flex" data-index="44" data-next="45"></div>
+                        <div class="col border d-flex" data-index="45" data-next="46"></div>
+                        <div class="col border d-flex" data-index="46" data-next="47"></div>
+                        <div class="col border d-flex" data-index="47" data-next="48"></div>
                     </div>
                     <div class="row">
-                        <div class="col border d-flex" data-index="" data-next="" data-red="true" data-red-next="">
-                        </div>
-                        <div class="col border bg-danger d-flex" data-index="" data-next=""></div>
-                        <div class="col border bg-danger d-flex" data-index="" data-next=""></div>
-                        <div class="col border bg-danger d-flex" data-index="" data-next=""></div>
-                        <div class="col border bg-danger d-flex" data-index="" data-next=""></div>
-                        <div class="col border bg-danger d-flex" data-index="" data-next=""></div>
+                        <div class="col border d-flex" data-index="41" data-next="42" data-red="58"></div>
+                        <div class="col border bg-danger d-flex" data-index="58" data-next="59"></div>
+                        <div class="col border bg-danger d-flex" data-index="59" data-next="60"></div>
+                        <div class="col border bg-danger d-flex" data-index="60" data-next="61"></div>
+                        <div class="col border bg-danger d-flex" data-index="61" data-next="62"></div>
+                        <div class="col border bg-danger d-flex" data-index="62" data-next=""></div>
                     </div>
                     <div class="row">
-                        <div class="col border d-flex" data-index="" data-next=""></div>
-                        <div class="col border d-flex" data-index="" data-next=""></div>
-                        <div class="col border d-flex bg-primary" data-index="" data-next="">
+                        <div class="col border d-flex" data-index="40" data-next="41"></div>
+                        <div class="col border d-flex" data-index="39" data-next="40"></div>
+                        <div class="col border d-flex bg-primary" data-index="38" data-next="39">
                             <svg viewBox="0 0 16 16" class="bi bi-star-fill m-auto" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
                             </svg>
                         </div>
-                        <div class="col border d-flex" data-index="" data-next=""></div>
-                        <div class="col border d-flex" data-index="" data-next=""></div>
-                        <div class="col border d-flex" data-index="" data-next=""></div>
+                        <div class="col border d-flex" data-index="37" data-next="38"></div>
+                        <div class="col border d-flex" data-index="36" data-next="37"></div>
+                        <div class="col border d-flex" data-index="35" data-next="36"></div>
                     </div>
                 </div>
 
@@ -166,33 +166,32 @@
                 <!-- path -->
                 <div class="col border border-left-0 bg-dark">
                     <div class="row">
-                        <div class="col border d-flex" data-index="" data-next=""></div>
-                        <div class="col border d-flex" data-index="" data-next=""></div>
-                        <div class="col border d-flex" data-index="" data-next=""></div>
-                        <div class="col border d-flex bg-success" data-index="" data-next="">
+                        <div class="col border d-flex" data-index="9" data-next="10"></div>
+                        <div class="col border d-flex" data-index="10" data-next="11"></div>
+                        <div class="col border d-flex" data-index="11" data-next="12"></div>
+                        <div class="col border d-flex bg-success" data-index="12" data-next="13">
                             <svg viewBox="0 0 16 16" class="bi bi-star-fill m-auto" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
                             </svg>
                         </div>
-                        <div class="col border d-flex" data-index="" data-next=""></div>
-                        <div class="col border d-flex" data-index="" data-next=""></div>
+                        <div class="col border d-flex" data-index="13" data-next="14"></div>
+                        <div class="col border d-flex" data-index="14" data-next="15"></div>
                     </div>
                     <div class="row">
-                        <div class="col border bg-warning d-flex" data-index="" data-next=""></div>
-                        <div class="col border bg-warning d-flex" data-index="" data-next=""></div>
-                        <div class="col border bg-warning d-flex" data-index="" data-next=""></div>
-                        <div class="col border bg-warning d-flex" data-index="" data-next=""></div>
-                        <div class="col border bg-warning d-flex" data-index="" data-next=""></div>
-                        <div class="col border d-flex" data-index="" data-next="" data-yellow="true" data-yellow-next=""></div>
+                        <div class="col border bg-warning d-flex" data-index="67" data-next=""></div>
+                        <div class="col border bg-warning d-flex" data-index="66" data-next="67"></div>
+                        <div class="col border bg-warning d-flex" data-index="65" data-next="66"></div>
+                        <div class="col border bg-warning d-flex" data-index="64" data-next="65"></div>
+                        <div class="col border bg-warning d-flex" data-index="63" data-next="64"></div>
+                        <div class="col border d-flex" data-index="15" data-next="16" data-yellow="63"></div>
                     </div>
                     <div class="row">
-                        <div class="col border d-flex" data-index="" data-next=""></div>
-                        <div class="col border d-flex" data-index="" data-next=""></div>
-                        <div class="col border d-flex" data-index="" data-next=""></div>
-                        <div class="col border d-flex" data-index="" data-next=""></div>
-                        <div class="col border bg-warning d-flex" data-index="" data-next="" yellow-start-box></div>
-                        <div class="col border d-flex" data-index="" data-next=""></div>
+                        <div class="col border d-flex" data-index="21" data-next="22"></div>
+                        <div class="col border d-flex" data-index="20" data-next="21"></div>
+                        <div class="col border d-flex" data-index="19" data-next="20"></div>
+                        <div class="col border d-flex" data-index="18" data-next="19"></div>
+                        <div class="col border bg-warning d-flex" data-index="17" data-next="18" yellow-start-box></div>
+                        <div class="col border d-flex" data-index="16" data-next="17"></div>
                     </div>
                 </div>
             </div>
@@ -225,40 +224,38 @@
                 <!-- path -->
                 <div class="bg-dark">
                     <div class="row">
-                        <div class="col border d-flex" data-index="" data-next=""></div>
-                        <div class="col border bg-primary d-flex" data-index="" data-next=""></div>
-                        <div class="col border d-flex" data-index="" data-next=""></div>
+                        <div class="col border d-flex" data-index="34" data-next="35"></div>
+                        <div class="col border bg-primary d-flex" data-index="72" data-next=""></div>
+                        <div class="col border d-flex" data-index="22" data-next="23"></div>
                     </div>
                     <div class="row">
-                        <div class="col border d-flex" data-index="" data-next=""></div>
-                        <div class="col border bg-primary d-flex" data-index="" data-next=""></div>
-                        <div class="col border" data-index="" data-next=""></div>
+                        <div class="col border d-flex" data-index="33" data-next="34"></div>
+                        <div class="col border bg-primary d-flex" data-index="71" data-next="72"></div>
+                        <div class="col border" data-index="23" data-next="24"></div>
                     </div>
                     <div class="row">
-                        <div class="col border d-flex" data-index="" data-next=""></div>
-                        <div class="col border bg-primary d-flex" data-index="" data-next=""></div>
-                        <div class="col border d-flex" data-index="" data-next=""></div>
+                        <div class="col border d-flex" data-index="32" data-next="33"></div>
+                        <div class="col border bg-primary d-flex" data-index="70" data-next="71"></div>
+                        <div class="col border d-flex" data-index="24" data-next="25"></div>
                     </div>
                     <div class="row">
-                        <div class="col border d-flex" data-index="" data-next=""></div>
-                        <div class="col border bg-primary d-flex" data-index="" data-next=""></div>
-                        <div class="col border d-flex bg-warning" data-index="" data-next="">
+                        <div class="col border d-flex" data-index="31" data-next="32"></div>
+                        <div class="col border bg-primary d-flex" data-index="69" data-next="70"></div>
+                        <div class="col border d-flex bg-warning" data-index="25" data-next="26">
                             <svg viewBox="0 0 16 16" class="bi bi-star-fill m-auto" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
                             </svg>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col border bg-primary d-flex" data-index="" data-next="" blue-start-box></div>
-                        <div class="col border bg-primary d-flex" data-index="" data-next=""></div>
-                        <div class="col border d-flex" data-index="" data-next=""></div>
+                        <div class="col border bg-primary d-flex" data-index="30" data-next="31" blue-start-box></div>
+                        <div class="col border bg-primary d-flex" data-index="68" data-next="69"></div>
+                        <div class="col border d-flex" data-index="26" data-next="27"></div>
                     </div>
                     <div class="row">
-                        <div class="col border d-flex" data-index="" data-next=""></div>
-                        <div class="col border d-flex" data-index="" data-next="" data-blue="true" data-blue-next="">
-                        </div>
-                        <div class="col border d-flex" data-index="" data-next=""></div>
+                        <div class="col border d-flex" data-index="29" data-next="30"></div>
+                        <div class="col border d-flex" data-index="28" data-next="29" data-blue="68"></div>
+                        <div class="col border d-flex" data-index="27" data-next="28"></div>
                     </div>
                 </div>
 
